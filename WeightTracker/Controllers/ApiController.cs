@@ -31,5 +31,15 @@ namespace WeightTracker.Controllers
 
             return user.Id;
         }
+
+        [Route("weights")]
+        public ActionResult<IEnumerable<Weight>> Weights()
+        {
+            var weights = this.usersService
+                .Weights(x => x.Kilograms > 500)
+                .ToList();
+
+            return weights;
+        }
     }
 }

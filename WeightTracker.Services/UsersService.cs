@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WeightTracker.Data;
 using WeightTracker.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace WeightTracker.Services
 {
@@ -94,6 +95,15 @@ namespace WeightTracker.Services
                .SingleOrDefault(u => u.Name == name);
 
             return user;
+        }
+
+        public IEnumerable<Weight> Weights(Expression<Func<Weight, bool>> where)
+        {
+            var weights =  this.db.Weights
+                .Where(where)
+                .OrderByDescending(w => w.Kilograms);
+
+            return weights;
         }
     }
 }

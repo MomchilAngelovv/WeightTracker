@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
@@ -46,7 +47,7 @@ namespace WeightTracker.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddWeight(decimal weight, string name, string secretWord)
+        public async Task<IActionResult> AddWeight(decimal weight, string name, string secretWord, IFormFile formFile)
         {
             var userExists = this.usersService.CheckCredentials(name, secretWord);
 

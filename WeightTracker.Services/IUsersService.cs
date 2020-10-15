@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using WeightTracker.Data;
@@ -14,6 +15,7 @@ namespace WeightTracker.Services
         bool CheckCredentials(string name, string secretWord);
         User GetUserBy(int id);
         User GetUserBy(string name);
+        IEnumerable<Weight> Weights(Expression<Func<Weight, bool>> where);
         Task<int> RegisterNewUser(string name, string secretWord);
     }
 }
