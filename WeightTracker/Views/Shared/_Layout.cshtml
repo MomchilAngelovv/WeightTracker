@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WeightTracker</title>
+    <partial name="_StylesPartial" />
+</head>
+<body>
+    <partial name="_HeaderPartial" />
+    <main class="container">
+        @RenderBody()
+    </main>
+    <partial name="_FooterPartial" />
+    <partial name="_ScriptsPartial" />
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

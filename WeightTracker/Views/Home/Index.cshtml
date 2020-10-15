@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row col s6 center-align">
+    <form class="center-align">
+        <h1>Who is checking</h1>
+        <div class="row offset-s6">
+            <div class="input-field col s6 center-align offset-s3">
+                <input id="name" type="text" placeholder="Name" class="validate">
+                <label for="name">Name</label>
+            </div>
+        </div>
+        <button id="open-secret-word-modal-btn" class="btn waves-effect waves-light" type="submit" name="action">Check me</button>
+    </form>
+    <p>Dont have a name? Register here</p><a asp-controller="Users" asp-action="Register" class="waves-effect waves-light btn">Register</a>
+</div>
+
+<div id="secret-word-modal" class="modal" hidden>
+    <div class="modal-content">
+        <h4>Enter your secret word</h4>
+        <input id="secret-word" type="text" placeholder="Secret word" class="validate">
+        <button id="weights-report-btn" class="btn waves-effect waves-light" type="submit" name="action">Get report</button>
+    </div>
+    <div class="modal-footer">
+        <button id="close-secret-word-modal-btn" class="btn waves-effect waves-light" type="submit" name="action">Close</button>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+
+        $('#open-secret-word-modal-btn').click(async function () {
+            event.preventDefault();
+
+            let name = $('#name').val();
+
+            if (!name) {
+                alert('Please enter name to search!');
+            }
+            else {
+
+                let userId = await $.get({
+                    url: `https://localhost:44389/api/usercheck?name=${name}`,
+                });
+                if (userId === 0) {
+                    alert('User not found!');
+                }
+                else {
+                    $('#secret-word-modal').toggle(200);
+                }
+            }
+        })
+
+        $('#weights-report-btn').click(function () {
+            event.preventDefault();
+            let name = $('#name').val();
+            let secretWord = $('#secret-word').val();
+            let url = `https://localhost:44389/Users/WeightsReport?name=${name}&secretWord=${secretWord}`;
+            window.location.replace(url);
+        })
+
+        $('#close-secret-word-modal-btn').click(function () {
+            event.preventDefault();
+
+            $('#secret-word-modal').hide(200);
+        })
+    </script>
+}
+

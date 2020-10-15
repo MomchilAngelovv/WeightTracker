@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeightTracker", "WeightTracker\WeightTracker.csproj", "{3C425417-1779-47FB-8785-0E37FF5A1D5D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeightTracker.Data", "WeightTracker.Data\WeightTracker.Data.csproj", "{CCF5C67F-A25A-4168-8968-002FCBD2E52A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeightTracker.Services", "WeightTracker.Services\WeightTracker.Services.csproj", "{610FA131-D3AB-4A0D-A63F-31ADD22D7898}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeightTracker.Models", "WeightTracker.Models\WeightTracker.Models.csproj", "{25EE543A-404E-49B7-8B40-5E324AE2D235}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeightTracker.Tests", "WeightTracker.Tests\WeightTracker.Tests.csproj", "{B496BE23-AF25-4D14-99DF-7BA485C0046E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C425417-1779-47FB-8785-0E37FF5A1D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C425417-1779-47FB-8785-0E37FF5A1D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C425417-1779-47FB-8785-0E37FF5A1D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C425417-1779-47FB-8785-0E37FF5A1D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF5C67F-A25A-4168-8968-002FCBD2E52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF5C67F-A25A-4168-8968-002FCBD2E52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF5C67F-A25A-4168-8968-002FCBD2E52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF5C67F-A25A-4168-8968-002FCBD2E52A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610FA131-D3AB-4A0D-A63F-31ADD22D7898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610FA131-D3AB-4A0D-A63F-31ADD22D7898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610FA131-D3AB-4A0D-A63F-31ADD22D7898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610FA131-D3AB-4A0D-A63F-31ADD22D7898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25EE543A-404E-49B7-8B40-5E324AE2D235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25EE543A-404E-49B7-8B40-5E324AE2D235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25EE543A-404E-49B7-8B40-5E324AE2D235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25EE543A-404E-49B7-8B40-5E324AE2D235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B496BE23-AF25-4D14-99DF-7BA485C0046E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B496BE23-AF25-4D14-99DF-7BA485C0046E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B496BE23-AF25-4D14-99DF-7BA485C0046E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B496BE23-AF25-4D14-99DF-7BA485C0046E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9592462F-5CFF-4146-978E-8635050EC14B}
+	EndGlobalSection
+EndGlobal
